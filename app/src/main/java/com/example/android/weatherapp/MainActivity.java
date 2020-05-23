@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     TextView resultText;
     Button button1;
     Button button2;
+    String api_id;
     public void again(View view){
         cityName.setText("");
         resultText.setText("");
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         DownloadTask task = new DownloadTask();
-        task.execute("https://samples.openweathermap.org/data/2.5/weather?q="+cityName.getText().toString()+"&appid=AIzaSyBWYYDQH47OtMv74jFpAfMf7IPIZG-AMcs");
+        task.execute("https://samples.openweathermap.org/data/2.5/weather?q="+cityName.getText().toString()+"&appid="+api_id);
         button1.setVisibility(View.INVISIBLE);
         button2.setVisibility(View.VISIBLE);
     }
