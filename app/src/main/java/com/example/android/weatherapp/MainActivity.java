@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e){
             e.printStackTrace();
         }
+        api_id="";
 
         DownloadTask task = new DownloadTask();
         task.execute("https://samples.openweathermap.org/data/2.5/weather?q="+cityName.getText().toString()+"&appid="+api_id);
